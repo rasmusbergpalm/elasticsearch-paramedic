@@ -384,7 +384,7 @@ App.indices = Ember.ArrayController.create({
 
     App.set("refreshing", true)
     $.getJSON(App.elasticsearch_url+"/_cluster/state",        __load_cluster_state);
-    $.getJSON(App.elasticsearch_url+"/_stats",                __load_indices_stats);
+    $.getJSON(App.elasticsearch_url+"/_status",                __load_indices_stats);
     $.getJSON(App.elasticsearch_url+"/_status?recovery=true", __load_indices_status);
 
     // Schedule next run
